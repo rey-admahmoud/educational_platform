@@ -1,0 +1,488 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ..........................header............................. */
+/* .active{
+    background-color: rgb(99, 221, 99);
+    border-radius: 5px;
+}  */
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.toup{
+    position: fixed;
+    top: 85%;
+    right: 2%;
+    z-index: 50;
+    font-size: 70px;
+    background-color: transparent;
+    border: 0px;
+    color: rgba(235, 94, 30, 0.551);
+}
+.toup i{
+    box-shadow: 2px 2px 5px red;
+    border-radius: 50%;
+}
+p{
+    font-size: 14px;
+    margin: 0;
+}
+h1{
+    letter-spacing: 3px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+span{
+    display: inline-block;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+/* span:hover{
+    transform: scale(1.1);
+} */
+.image_filter{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/image3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter:blur(5px); */
+}
+.header{
+    background-image: url('../images/image3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    width: 85%;
+    height: 80vh;
+    box-shadow: 5px 5px 10px white;
+    filter: blur();
+}
+.nav-header{
+    background-color: #222222c4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.container-fluid a i{
+    font-size: 30px;
+    color: rgb(32, 86, 214);
+    position: relative;
+}
+.container-fluid  a i::after{
+    content: "teaching";
+    position: absolute;
+    top: 3px;
+    left: 100%;
+    font-size:14px;
+    color: white;
+}
+.navbar-collapse ul li{
+    margin-right: 15px;
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: bold;
+    transition: 1s;
+}
+.navbar-collapse ul li:hover{
+    background-color: #000;
+    color: white;
+    box-shadow: -5px 5px 30px 2px #777;
+}
+.content-header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.content-header h1{
+    color: rgb(32, 86, 214);
+    font-weight: bold;
+}
+.content-header div{
+    text-align: center;
+}
+.content-header div h1{
+    font-size: 50px;
+}
+.content-header div span{
+    margin-left: 10px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+.content-header div span a{
+    z-index: 0;
+}
+.content-header div span div{
+    position: absolute;
+    background-color: #111111ab;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.content-header div span:hover div{
+    width: 100%;
+}
+@media (max-width:800px) {
+    .navbar-collapse ul li{
+        width: 100px;
+        z-index: 10000;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* ............................end section header...................... */
+/* .................................start section slide................. */
+
+.sectionslide{
+    padding: 50px 0;
+    background-color: #333;
+}
+.main_slide{
+    width: 80%;
+    height: 80vh;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50px;
+    background: #3a3636;
+    box-shadow:  20px 20px 60px #191717,
+                -20px -20px 60px #5b5555;
+}
+.main_slide img{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    opacity: 0;
+}
+.main_slide .active{
+    opacity: 1;
+}
+.main_slide .controle{
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+.controle .next,
+.controle .back{
+    border: 0px;
+    padding: 10px 20px;
+    background-color: rgb(26, 7, 7);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ .disable{
+    border: 0px;
+    padding: 10px 20px;
+    background-color: rgb(221, 9, 9);
+    cursor: no-drop;
+    color: white;
+    border-radius: 5px;
+}
+#header{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    padding: 10px;
+    z-index: 20;
+    border-radius: 3px;
+    background: #40aac4;
+    box-shadow:  7px 7px 10px #0b0d0e,
+                 -7px -7px 10px #65ffff;
+}
+/* ...........................................section slide..................................... */
+/* ...........................................section category..................................... */
+
+.head_section{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+.row_category{
+    height: auto;
+}
+.category{
+    /* height: auto; */
+    height: 100%;
+    transition: 1s;
+    color: white;
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow:  3px 3px 5px #d5d4d4;
+}
+.div_category{
+    margin-top: 15px;
+}
+.category:hover{
+    transform: scale(1.03) ;
+}
+
+.category img{
+    width: 100%;
+    height: 35vh;
+    transition: 0.5s;
+}
+.category img:hover{
+    transform: rotateY(180deg);
+}
+/* ......................@media category....................... */
+@media (max-width:1000px) {
+    .category{
+        margin-top: 40px;
+    }
+    .div_category{
+        width: 50%;
+        height: auto;
+    }
+}
+@media (max-width:400px) {
+    .div_category{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width:800px) {
+    .div_category{
+        overflow: hidden;
+        height: auto;
+    }
+}
+/* ............................end media category.......................... */
+
+.h2_category{
+    color: white;
+}
+.desc_ctegory{
+    padding: 5px 0 20px 15px;
+    position: relative;
+
+}
+.desc_ctegory .text_category{
+    width: 70%;
+}
+.text_category p{
+    width: 100%;
+    display: inline-block;
+}
+.desc_ctegory a{
+    position: absolute;
+    right: 1%;
+    top: 67%;
+}
+.desc_ctegory span{
+    position: absolute;
+    display: inline-block;
+    top: 1%;
+    right: 1%;
+    padding: 0;
+    color: rgb(255, 166, 0);
+}
+.desc_ctegory span i{
+    font-size: 12px;
+
+}
+
+/*....................................................... dropdwon .............................*/
+body{
+    background-color: #191717;
+}
+.main{
+    width: 50%;
+    background-color: red;
+    margin: 50px auto;
+    height: 50px;
+}
+/* a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+} */
+.list{
+    padding: 8px;
+}
+.list{
+    position: relative;
+}
+.list .sublist{
+    background-color:white;
+    position: absolute;
+    top: 50px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 3px 5px  white;
+    display: none;
+    transition: 1s;
+}
+.sublist li:hover a{
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+.list .sublist li{
+    list-style: none;
+}
+.list .sublist a{
+    color: #0b0d0e;
+    display: inline-block;
+    padding: 10px;
+}
+.list .sublist::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 10%;
+    border-bottom: 8px solid white;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+.list:hover .sublist{
+    display: block;
+    transition: 1s;
+}
+
+
+/*..........................footer.............................. */
+
+.footer{
+    background-color: #0a0909;
+    padding: 20px;
+    margin-top: 50px;
+}
+ .row .div-list{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.div-list .col-md-4 ul {
+    list-style: none;
+    color: white;
+}
+.text_footer{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+}
+
+
+/* ........................................style code of about page.............................. */
+.div-about{
+    padding: 50px 0;
+}
+.header_about{
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+}
+.text_about h1{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.text_about p{
+    color: #999;
+    line-height: 30px;
+}
+.img_about img{
+    width: 100%;
+    height: 50vh;
+}
+
+/* ........................................end style code of about page.............................. */
+/* ........................................style code of contact page.............................. */
+.contact_form{
+    width: 70%;
+    margin: 10px auto;
+}
+.contact_form input{
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    height: 40px;
+    border: 0px;
+    padding-left: 10px;
+}
+.contact_form input:active{
+    border: 1px solid rgb(43, 43, 177);
+}
+.contact_form .btn{
+    width: 100px;
+    margin: 10px auto;
+    background-color: rgb(44, 74, 224);
+    cursor: pointer;
+}
+.contact_form .btn:hover{
+    background-color: #40aac4;
+}
+
+/* .............................login............................ */
+
+
+.login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color:#191717;
+    align-items: center;
+}
+
+.login div{
+    width: 30%;
+    height: auto;
+    background-color: rgba(158, 205, 252, 0.737);
+    padding: 40px;
+    box-shadow:  2px 2px 2px white;
+}
+.login div form input{
+    width: 100%;
+    height: 30px;
+    border: 0px;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+.login div p{
+    margin-top: 20px;
+    color: white;
+}
+.login div form .btn{
+    width: 50%;
+    display: inline-block;
+    margin-left: 70px;
+    background-color: #495fce;
+    border-radius: 5px;
+    color: white;
+}
+
+/* ...........................end login.......................... */
